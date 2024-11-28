@@ -22,7 +22,7 @@ from openai import OpenAI, DefaultHttpxClient
 import httpx
 
 client = OpenAI(
-    base_url="http://mysinmplellmcache.com:8083/v1",  # Or use OPENAI_BASE_URL env var
+    base_url="http://mysimplellmcache.com:8083/v1",  # Or use OPENAI_BASE_URL env var
 )
 ```
 
@@ -45,7 +45,7 @@ Simple LLM Cache acts as a transparent proxy between your application and your L
 2. If found, it returns the cached response immediately
 3. If not found, it forwards the request to the actual LLM provider and caches the response
 
-Simple LLM Cache only adds a header to let you know if a response was cached or not.
+Simple LLM Cache only adds a header if a response was cached.
 
 ## Use Cases
 
